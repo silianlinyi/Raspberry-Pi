@@ -24,3 +24,29 @@ available.
 获取一个10秒的视频
 > raspivid -o video.h264 -t 10000
 
+在演示模式下获取10秒视频
+> raspivid -o video.h264 -t 10000 -d
+
+To see a list of possible options for running raspivid or raspistill, you can run:
+> raspivid | less
+
+> raspistill | less
+
+Use the arrow keys to scroll and type q to exit.
+
+> Note that we recommend that you change SSH password if you are using a camera, in order to prevent unwanted access.
+
+## 如何通过网络查看树莓派摄像头的视频
+> Linux:
+
+在终端运行下列命令来安装依赖：
+> sudo apt-get install mplayer netcat
+
+Find your IP address by running ifconfig. (Your IP address will be listed in the console output and will probably 
+be of the form 192.168.1.XXX).
+
+
+
+
+
+
