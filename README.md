@@ -65,6 +65,28 @@ Enter the following command at the prompt to view the feed using MPlayer:
 
 ### To view the feed on OS X
 
+Alternatively, you can download mplayer using Brew, which we recommend.
+
+Find your IP address by running ifconfig. (Your IP address will be listed in the console output and will probably 
+be of the form 192.168.1.XXX).
+
+Run the following command in Terminal to view the feed using MPlayer:
+> nc -l -p 5001 | mplayer -fps 31 -cache 1024 -
+
+To view the feed on a Raspberry Pi:
+
+Find your IP address by running ifconfig. (Your IP address will be listed in the console output and will probably 
+be of the form 192.168.1.XXX).
+
+Run the following commands in a terminal on the receiving Pi:
+> mkfifo buffer
+> nc -p 5001 -l > buffer | /opt/vc/src/hello_pi/hello_video/hello_video.bin buffer
+
+### To transmit the feed from the Pi with camera module attached
+
+
+
+
 
 
 
