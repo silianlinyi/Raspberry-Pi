@@ -37,7 +37,7 @@ Use the arrow keys to scroll and type q to exit.
 > Note that we recommend that you change SSH password if you are using a camera, in order to prevent unwanted access.
 
 ## 如何通过网络查看树莓派摄像头的视频
-> Linux:
+### To view the feed on Linux:
 
 在终端运行下列命令来安装依赖：
 > sudo apt-get install mplayer netcat
@@ -45,6 +45,25 @@ Use the arrow keys to scroll and type q to exit.
 Find your IP address by running ifconfig. (Your IP address will be listed in the console output and will probably 
 be of the form 192.168.1.XXX).
 
+Run the following command in a terminal to view the feed using MPlayer:
+> nc -l -p 5001 | mplayer -fps 31 -cache 1024 -
+
+### To view the feed on Windows
+
+Install and run Linux instead.
+
+Find your IP address by running ipconfig. (Your IP address will be listed in the console output and will probably 
+be of the form 192.168.1.XXX).
+
+Note that your browser may complain that these files are malicious, as they are unsigned executables.
+
+Press the Windows key and the ‘r’ key simultaneously to bring up the “Run” dialog. Enter cmd.exe into the dialog 
+and press enter/return to open a DOS prompt.
+
+Enter the following command at the prompt to view the feed using MPlayer:
+> [Path to nc.exe]\nc.exe -L -p 5001 | [Path to mplayer.exe]\mplayer.exe -fps 31 -cache 1024 -
+
+### To view the feed on OS X
 
 
 
