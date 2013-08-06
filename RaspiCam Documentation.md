@@ -63,6 +63,34 @@ so there may be bars on some edges.
 
 完全禁用预览窗口。请注意：尽管预览窗口被禁用，摄像头还是会产生帧，所以也会耗电。
 
+> --opacity, -op 设置预览窗口透明度
+
+设置预览窗口透明度。0 = 透明，255 = 完全不透明
+
+### 摄像头控制选项
+
+> --sharpness, -sh 设置图像清晰度(-100 to 100)
+
+设置图像清晰度，默认是0.
+
+> --contrast, -co 设置图像对比度(-100 to 100)
+
+设置图像对比度，默认是0.
+
+> --brightness, -br 设置图像亮度(0 to 100)
+
+设置图像亮度，默认是50.0是黑的，100是白的。
+
+> --saturation, -sa 设置图像色彩饱和度(-100 to 100)
+
+设置图像色彩饱和度，默认是0.
+
+> --ISO, -ISO Set capture ISO
+
+Sets the ISO to be used for captures. Range is 100 to 800.
+
+
+
 
 
 
