@@ -48,7 +48,8 @@ to attach the connectors at www.raspberrypi.org/archives/3890 (scroll down for t
 ## Setting up the Camera software
 
 ## 通用命令行选项
-### 预览窗口
+
+### 预览窗口（Preview Window）
 > --preview, -p 预览窗口设置 <'x,y,w,h'>
 
 Allows the user to define the size and location on the screen that the preview window will be placed. Note this will be
@@ -67,7 +68,7 @@ so there may be bars on some edges.
 
 设置预览窗口透明度。0 = 透明，255 = 完全不透明
 
-### 摄像头控制选项
+### 摄像头控制选项（Camera Control Options）
 
 > --sharpness, -sh 设置图像清晰度(-100 to 100)
 
@@ -89,7 +90,19 @@ so there may be bars on some edges.
 
 Sets the ISO to be used for captures. Range is 100 to 800.
 
+> --vstab, -vs 打开视频防抖
 
+打开视频防抖，只用于视频模式下。
+
+> --ev, -ev 设置曝光补偿
+
+设置图像曝光补偿。范围是-10到+10，默认是0.
+
+> --exposure, -ex 设置曝光模式
+
+可选项包括：
+
+* off
 
 
 
