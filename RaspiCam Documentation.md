@@ -186,6 +186,47 @@ Allows the specification of the area of the sensor to be used as the source for 
 as x,y for the top left corner, and a width and height, all values in normalised coordinates (0.0-1.0). So to set a ROI 
 at half way across and down the sensor, and an width and height of a quarter of the sensor use :-roi 0.5,0.5,0.25,0.25
 
+## 特定应用设置（Application-­‐specific settings）
+
+### raspistill
+
+    --width, -w Set image width <size>
+    --height, -h Set image height <size>
+    --quality, -q Set jpeg quality <0 to 100>
+    
+Quality 100几乎没有压缩，75是一个不错的选择。
+
+    --raw, -r 添加raw Bayer数据到jpeg metadata中
+
+This option inserts the raw Bayer data from the camera in to the JPEG metadata.
+
+    --output -o 输出文件名字<filename>
+
+指定输出文件名字。如果没有指定，文件将不会保存。如果文件名字是'-'，那么输出将会被发送到<code>stdout</code>。
+
+    --verbose, -v 运行过程中输出详细信息。
+
+在运行过程期间输出调试/信息消息。
+
+    --timeout, -t Time before capture and shut down
+
+The program will run for this length of time, then take the capture (if output is specified). If not specified, 
+this is set to 5 seconds.
+
+    --timelapse, -tl 间隔拍摄模式
+
+The specific value is the time between shots in milliseconds. Note you should specify %04d at the point in the filename 
+where you want a frame count number to appear. For example:
+
+    -t 30000 -tl 2000 -o image%04d.jpg
+
+上面的代码意思是，在30秒时间内，每两秒截一张图，依次命名为image1.jpg, image0002.jpg...image0015.jpg. Note that the %04d 
+indicates a four-digit number with leading zeros added to pad to the required number of digits. So, for example, 
+%08d would result in an eight-digit number.
+
+    --thumb, -th Set thumbnail parameters (x:y:quality)
+
+
 
 
 
