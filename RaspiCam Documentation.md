@@ -47,6 +47,23 @@ to attach the connectors at www.raspberrypi.org/archives/3890 (scroll down for t
 
 ## Setting up the Camera software
 
+## 通用命令行选项
+### 预览窗口
+> --preview, -p 预览窗口设置 <'x,y,w,h'>
+
+Allows the user to define the size and location on the screen that the preview window will be placed. Note this will be
+superimposed over the top of any other windows/graphics.
+
+> --fullscreen, -f 全屏预览模式
+
+Forces the preview window to use the whole screen. Note that the aspect ratio of the incoming image will be retained, 
+so there may be bars on some edges.
+
+> --nopreview, -n, 禁用预览窗口
+
+完全禁用预览窗口。请注意：尽管预览窗口被禁用，摄像头还是会产生帧，所以也会耗电。
+
+
 
 
 
