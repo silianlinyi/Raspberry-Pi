@@ -102,10 +102,18 @@ Sets the ISO to be used for captures. Range is 100 to 800.
 
 可选项包括：
 
-  || *Year* || *Temperature (low)* || *Temperature (high)* ||
-  || 1900 || -10 || 25 ||
-  || 1910 || -15 || 30 ||
-  || 1920 || -10 || 32 ||
+* <code>auto</code>           自动曝光模式
+* <code>night</code>          夜间拍摄模式
+* <code>nightpreview</code>
+* <code>backlight</code>      背光
+* <code>spotlight</code>
+* <code>sports</code>         运动Select setting for sports (fast shutter etc.)
+* <code>snow</code>           Select setting optimized for snowy scenery
+* <code>beach</code>          Select setting optimized for beach
+* <code>verylong</code>       Select setting for long exposures
+* <code>fixedfps</code>       Constrain fps to a fixed value
+* <code>antishake</code>      Antishake mode
+* <code>fireworks</code>      Select setting optimized for fireworks
 
 
 
