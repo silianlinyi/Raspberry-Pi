@@ -102,7 +102,10 @@ Sets the ISO to be used for captures. Range is 100 to 800.
 
 可选项包括：
 
-* off
+  || *Year* || *Temperature (low)* || *Temperature (high)* ||
+  || 1900 || -10 || 25 ||
+  || 1910 || -15 || 30 ||
+  || 1920 || -10 || 32 ||
 
 
 
