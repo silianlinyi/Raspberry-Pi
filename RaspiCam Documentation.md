@@ -243,6 +243,95 @@ as a millisecond value.
 
     --exif, -x EXIF tag to apply to captures (format as 'key=value')
 
+Allows the insertion of specific EXIF tags into the JPEG image. You can have up to 32 EXIF tge entries. This is useful 
+for things like adding GPS metadata. For example, to set the longitude:--exif GPS.GPSLongitude=5/1,10/1,15/100
+
+would set the longitude to 5degs, 10 minutes, 15 seconds. See EXIF documentation for more details on the range of tags
+available; the supported tags are as follows:
+
+    --fullpreview, -fp 全屏预览模式
+    
+This runs the preview windows using the full resolution capture mode. Maximum frames per second in this mode is 15fps 
+and the preview will have the same field of view as the capture. Captures should happen more quickly as no mode change
+should be required. This feature is currently under development.
+
+
+### raspistillyuv
+
+Many of the options for raspistillyuv are the same as those for raspistill. This section shows the differences.
+
+不支持的选项：
+    
+    --exif, --encoding, --thumb, --raw, --quality
+
+额外的选项：
+
+    --rgb, -rgb Save uncompressed data as RGB888
+
+This option forces the image to be saved as RGB data with 8 bits per channel, rather than YUV420.
+
+> Note that the image buffers saved in raspistillyuv are padded to a horizontal size divisible by 16 (so there may be
+unused bytes at the end of each line to made the width divisible by 16). Buffers are also padded vertically to be 
+divisible by 16, and in the YUV mode, each plane of Y,U,V is padded in this way.
+
+### raspivid
+
+    --width, -w 设置视频图像宽度<size>
+
+设置视频图像宽度，64~1920像素之间。
+
+    --height, -h 设置视频图像高度<size>
+
+设置视频图像高度，64~1080像素之间。
+
+    --bitrate, -b 设置比特率
+
+Use bits per second, so 10MBits/s would be -b 10000000. For H264, 1080p a high quality bitrate would be 15Mbits/s 
+or more.
+
+    --output, -o 指定输出文件名字<filename>.
+
+指定输出文件名字。如果不指定，文件将不会保存。如果文件名字是'-'，那么所有输出都会被发送到stdout中。
+
+    --verbose, -v 在运行期间输出详细信息。
+
+Outputs debugging/information messages during the program run.
+
+    --timeout, -t Time before capture and shut down
+
+The program will run for this length of time, then take the capture (if output is specified). If not specified, 
+this is set to five seconds. 设置为0意味着应用将会一直运行直到用户按下Ctrl-C.
+
+    --demo, -d 运行演示模式<milliseconds>
+
+This option cycles through range of camera options, no capture is done, the demo will end at the end of the timeout 
+period, irrespective of whether all the options have been cycled. The time between cycles should be specified as 
+a millisecond value.
+
+    --framerate, -fps Specify the frames per second to record
+
+到目前为止，最小的帧率允许为2fps，最大的帧率为30fps。这在将来可能会改变。
+
+    --penc, -e Display preview image after encoding
+
+Switch on an option to display the preview after compression. This will show any compression artefacts in the preview 
+window. In normal operation, the preview will show the camera output prior to being compressed. This option is not 
+guaranteed to work in future releases.
+
+    --intra, -g Specify the intra refresh period (key frame rate/GoP)
+
+Sets the intra refresh period (GoP) rate for the recorded video. H.264 video uses a complete frame (I-frame) every 
+intra refresh period from which subsequent frames are based. This options specifies the numbers of frames between 
+each I-frame. Larger numbers here will reduce the size of the resulting video, smaller numbers make the stream more 
+robust to error.
+
+## 例子
+
+### Still captures
+
+
+    
+
 
 
 
