@@ -224,7 +224,24 @@ where you want a frame count number to appear. For example:
 indicates a four-digit number with leading zeros added to pad to the required number of digits. So, for example, 
 %08d would result in an eight-digit number.
 
-    --thumb, -th Set thumbnail parameters (x:y:quality)
+    --thumb, -th 设置缩略图参数(x:y:quality)
+
+
+Allows specification of the thumbnail image inserted in to the JPEG file. If not specified, defaults are a size of 
+64x48 at quality 35.
+
+    --demo, -d 运行演示模式<milliseconds>
+
+This options cycles through range of camera options, and no capture is done. The demo will end at the end of the 
+timeout period, irrespective of whether all the options have been cycled. The time between cycles should be specified 
+as a millisecond value.
+
+    --encoding, -e 设置输出文件编码
+
+有效的选项有：JPG，BMP，GIF和PNG。需要注意的是：JPEG类型的图片保存时利用了硬件加速，所以比没有加速的图像类型
+（GIF，PNG，BMP）保存时间更短。另外需要注意编码成一个文件时，文件后缀是被完全忽略的。
+
+    --exif, -x EXIF tag to apply to captures (format as 'key=value')
 
 
 
