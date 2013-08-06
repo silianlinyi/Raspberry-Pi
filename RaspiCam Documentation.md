@@ -115,6 +115,59 @@ Sets the ISO to be used for captures. Range is 100 to 800.
 * <code>antishake</code>      Antishake mode
 * <code>fireworks</code>      Select setting optimized for fireworks
 
+> 请注意并非所有这些设置都已实现，依赖于camera tuning
+
+> --awb, -awb 设置自动白平衡(AWB)
+
+* <code>off</code>            Turn off white balance calculation
+* <code>auto</code>           自动模式（默认）
+* <code>sun</code>            Sunny mode
+* <code>cloud shade</code>    Cloudy mode
+* <code>tungsten</code>       Tungsten lighting mode
+* <code>fluorescent</code>    Fluorescent lighting mode
+* <code>incandescent</code>   Incandescent lighting mode
+* <code>flash</code>          Flash mode
+* <code>horizon</code>        Horizon mode
+
+> --imxfx, -ifx 设置图像特效
+
+* <code>none</code>           无
+* <code>negative</code>       负片
+* <code>solarise</code>       过度曝光的图像
+* <code>whiteboard</code>     Whiteboard effect
+* <code>blackboard</code>     Blackboard effect
+* <code>sketch</code>         素描特效
+* <code>denoise</code>        去噪图像
+* <code>emboss</code>         浮雕特效
+* <code>oilpaint</code>       油画特效
+* <code>hatch</code>          Cross-hatch sketch style
+* <code>gpen</code>           石墨素描风格
+* <code>pastel</code>         柔光特效
+* <code>watercolour</code>    水彩效果
+* <code>film</code>           Grainy film effect
+* <code>blur</code>           模糊效果
+* <code>saturation</code>     Colour-saturate the image
+* <code>colourswap</code>     没有完全实现
+* <code>washedout</code>      没有完全实现
+* <code>posterise</code>      没有完全实现
+* <code>colourpoint</code>    没有完全实现
+* <code>colourbalance</code>  没有完全实现
+* <code>cartoon</code>        没有完全实现
+
+> --colfx, -cfx 设置色彩效果<U:V>
+
+The supplied U and V parameters (range 0 to 255) are applied to the U and Y channels of the image. For example, --colfx 
+128:128 should result in a monochrome image.
+
+> --metering, -mm 设置测光模式
+
+指定测光模式用于预览和截图。
+* <code>average</code>        Average the whole frame for metering
+* <code>spot</code>           Spot metering
+* <code>backlit</code>        Assume a backlit image
+* <code>matrix</code>         Matrix metering
+
+
 
 
 
