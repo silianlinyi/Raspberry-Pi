@@ -113,7 +113,12 @@ your web server:
         </body>
     </html>
 
+You're done! Visit your html page and after a moment's buffering you should see video.
 
+<b>NOTES</b>
+
+I found I can have a consistent 25 fps at a bitrate of 500000 over a USB Netgear 8192CU Wi-Fi dongle with a delay of about 1s at best.
+Other types of h264 stream players, e.g. flowplayer, are available.
 
 
 
