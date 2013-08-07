@@ -23,7 +23,7 @@ firmware and enabled the camera. 并且在树莓派上配置了一个Web服务�
     seekGranularity=0.1
     clientSideBuffer=30//客户端缓存区
 
-重启crtmpserver服务器
+重启crtmpserver流媒体服务器
 
     sudo /etc/init.d/crtmpserver restart
 
