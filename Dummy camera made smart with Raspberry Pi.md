@@ -31,3 +31,5 @@ I found these parts on Amazon.co.uk.
 <img src="http://files.bjurr.se/blog/small_20130806_093320.jpg">
 
 <img src="http://files.bjurr.se/blog/small_20130806_093424.jpg">
+
+### 原文地址：http://bjurr.se/cam+dummy+made+pi+raspberry+smart
