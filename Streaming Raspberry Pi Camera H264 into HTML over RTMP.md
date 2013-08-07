@@ -1,11 +1,11 @@
-# Streaming Raspberry Pi Camera H264 into HTML over RTMP
+### Streaming Raspberry Pi Camera H264 into HTML over RTMP
 
-## SPD Raspberry Pi Camera setup instructions for Raspbian Wheezy
+#### SPD Raspberry Pi Camera setup instructions for Raspbian Wheezy
 
 Requirements: Raspbian Wheezy with hard float enabled. I assume you have avahi, wifi, and have updated to the latest 
 firmware and enabled the camera. 并且在树莓派上配置了一个Web服务器。
 
-安装crtmpserver：
+安装crtmpserver流媒体服务器：
 
     sudo aptitude install crtmpserver
 
@@ -13,7 +13,7 @@ firmware and enabled the camera. 并且在树莓派上配置了一个Web服务�
 
     sudo mkdir /var/log/crtmpserver
 
-Change these values in /etc/crtmpserver/applications/flvplayback.lua
+改变<code>/etc/crtmpserver/applications/flvplayback.lua</code>目录下的flvplayback.lua文件的某些值。
 
     validateHandshake=false,
     keyframeSeek=false,
@@ -24,6 +24,7 @@ Change these values in /etc/crtmpserver/applications/flvplayback.lua
 
     sudo /etc/init.d/crtmpserver restart
 
+源码方式安装ffmpeg，这一步骤是非常重要的。
 Install ffmpeg from source. This step is very important. It won't work with the Raspbian version of ffmpeg because the 
 Debian version of libavcodec doesn't contain the H264 libraries needed for the flash streaming protocol.
 
