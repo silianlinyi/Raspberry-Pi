@@ -329,6 +329,88 @@ robust to error.
 
 ### Still captures
 
+By default, captures are done at the highest resolution supported by the sensor. This can be changed using the -w and 
+-h command line options.
+
+Taking a default capture after two seconds (note times are specified in milliseconds) on viewfinder, saving in image.jpg
+
+    raspistill -t 2000 -o image.jpg
+
+Take a capture at a different resolution
+
+    raspistill -t 2000 -o image.jpg -w 640 -h 480
+
+Now reduce the quality considerably to reduce file size
+
+    raspistill -t 2000 -o image.jpg -q 5
+
+Force the preview to appear at coordinate 100,100, with width 300 and height 200 pixels.
+
+    raspistill -t 2000 -o image.jpg -p 100,100,300,200
+
+Disable preview entirely.
+
+    raspistill -t 2000 -o image.jpg -n
+
+Save the image as a png file (无损压缩，但速度比JPEG要慢). Note that the filename suffix is ignored when choosing the 
+image encoding.
+
+    raspistill -t 2000 -o image.png –e png
+
+Add some EXIF information to the JPEG. This sets the Artist tag name to Mooncake, and the GPS altitude to 123.5m. 
+Note that if setting GPS tags you should set as a minimum GPSLatitude, GPSLatitudeRef, GPSLongitude, GPSLongitudeRef, 
+GPSAltitude and GPSAltitudeRef.
+
+    raspistill -t 2000 -o image.jpg -x IFDO.Artist=Mooncake -x GPS.GPSAltitude=1235/10
+
+设置浮雕效果的图片。
+
+    raspistill -t 2000 -o image.jpg -ifx emboss
+
+Set the U and V channels of the YUV image to specific values (128:128 产生一个灰度图片)
+
+    raspistill -t 2000 -o image.jpg -cfx 128:128
+
+运行预览2秒钟，不保存图片
+
+    raspistill -t 2000
+
+Take timelapse picture, one every 10 seconds for 10 minutes (10 minutes = 600000ms), named image_number_1_today.jpg,
+image_number_2_today.jpg onwards.
+
+    raspistill -t 600000 -tl 10000 -o image_num_%d_today.jpg
+
+拍一张图片并且将图片数据发送到stdout
+
+    raspistill -t 2000 -o -
+
+Take a picture and send image data to file
+    
+    raspistill -t 2000 -o - > my_file.jpg
+
+### 视频捕捉（Video Captures）
+
+图像大小和预览设置与stills capture类似，视频录制的默认大小是1080p (1920x1080)。
+
+默认配置（1080p30）录一个5秒钟的视频剪辑
+
+    raspivid -t 5000 -o video.h264
+
+Record a 5s clip at a specified bitrate (3.5MBits/s)
+
+    raspivid -t 5000 -o video.h264 -b 3500000
+
+Record a 5s clip at a specified framerate (5fps)
+
+    raspivid -t 5000 -o video.h264 -f 5
+
+Encode a 5s camera stream and send image data to stdout
+
+    raspivid -t 5000 -o -
+
+Encode a 5s camera stream and send image data to file
+
+    raspivid -t 5000 -o - > my_file.h264
 
     
 
