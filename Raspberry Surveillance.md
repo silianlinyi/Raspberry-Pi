@@ -23,3 +23,5 @@ captured event.
 * <a href="http://files.bjurr.se/blog/00003-image.jpg" target="_blank">Picture that detected change</a>
 * <a href="http://files.bjurr.se/blog/00003-2013-08-06_10-03-30-video.h264" target="_blank">Video recorded on trigger</a>
 * <a href="http://files.bjurr.se/blog/00003-image-diff.jpg" target="_blank">Picture showing what was changed in picture</a>
+
+### 原文地址：http://bjurr.se/raspberry+surveillance
