@@ -18,10 +18,10 @@ firmware and enabled the camera. 并且在树莓派上配置了一个Web服务�
 
 改变<code>/etc/crtmpserver/applications/flvplayback.lua</code>目录下的flvplayback.lua文件的某些值。
 
-    validateHandshake=false,
-    keyframeSeek=false,
+    validateHandshake=false,//验证握手
+    keyframeSeek=false,//关键帧寻找
     seekGranularity=0.1
-    clientSideBuffer=30
+    clientSideBuffer=30//客户端缓存区
 
 重启crtmpserver服务器
 
