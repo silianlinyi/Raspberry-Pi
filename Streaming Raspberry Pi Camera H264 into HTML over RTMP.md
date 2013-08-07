@@ -58,7 +58,8 @@ Download jwplayer from http://www.longtailvideo.com/, unzip it and place the jwp
 web server. I got jwplayer version 3359, YMMV. Then, place the following in an html file in the same directory of 
 your web server:
     
-    index.html
+> index.html
+
     <html>
     <head>
         <title>Raspbi Camera RTMP stream test</title>
@@ -80,7 +81,8 @@ your web server:
     </body>
     </html>
     
-    index.css
+> index.css
+
     * {
         margin: 0;
     	padding: 0;
@@ -100,7 +102,8 @@ your web server:
     	z-index: 10;
     }
     
-    app.js
+> app.js
+
     jwplayer('video-jwplayer').setup({
         flashplayer: "../jwplayer/jwplayer.flash.swf",
     	file: "rtmp://192.168.1.124/flvplayback/flv:myStream.flv",
