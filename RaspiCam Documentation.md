@@ -52,6 +52,8 @@ to attach the connectors at www.raspberrypi.org/archives/3890 (scroll down for t
 ### 预览窗口（Preview Window）
 > --preview, -p 预览窗口设置 <'x,y,w,h'>
 
+    raspivid -o out.h264 -t 0 -p '0,0,400,300'
+
 Allows the user to define the size and location on the screen that the preview window will be placed. Note this will be
 superimposed over the top of any other windows/graphics.
 
